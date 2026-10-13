@@ -1,0 +1,48 @@
+<header>
+  <a class="brand" routerLink="/">InfinityTech</a><a routerLink="/">← Volver a la tienda</a>
+</header>
+<main>
+  <section class="login-card" aria-labelledby="login-title">
+    <p class="eyebrow">TU CUENTA</p>
+    <h1 id="login-title">Iniciar sesión</h1>
+    <p class="intro">Introduce los datos de tu cuenta para continuar.</p>
+    @if (checking()) {
+      <p role="status">Comprobando sesión…</p>
+    } @else {
+      <form #loginForm="ngForm" (ngSubmit)="login()">
+        <label for="login-email">Correo electrónico</label>
+        <input
+          id="login-email"
+          name="email"
+          type="email"
+          autocomplete="username"
+          required
+          email
+          maxlength="254"
+          [(ngModel)]="email"
+          [disabled]="busy()"
+        />
+        <label for="login-password">Contraseña</label>
+        <input
+          id="login-password"
+          name="password"
+          type="password"
+          autocomplete="current-password"
+          required
+          maxlength="128"
+          [(ngModel)]="password"
+          [disabled]="busy()"
+        />
+        @if (error()) {
+          <p class="error" role="alert">{{ error() }}</p>
+        }
+        <button type="submit" [disabled]="busy() || loginForm.invalid">
+          {{ busy() ? 'Entrando…' : 'Iniciar sesión' }}
+        </button>
+      </form>
+    }
+    <p class="help">
+      Acceso para cuentas autorizadas. Puedes explorar la tienda y comprar sin iniciar sesión.
+    </p>
+  </section>
+</main>

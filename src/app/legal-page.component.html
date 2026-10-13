@@ -1,0 +1,41 @@
+<header class="legal-header">
+  <a class="brand" routerLink="/">Infinity<span>Tech</span></a>
+  <a routerLink="/">← Volver a la tienda</a>
+</header>
+<main class="legal-main">
+  @if (page(); as document) {
+    <p class="eyebrow">TRANSPARENCIA · INFINITYTECH</p>
+    <h1>{{ document.title }}</h1>
+    <p class="intro">{{ document.introduction }}</p>
+    <aside class="draft-note" aria-label="Alcance de esta información">
+      <strong>Información sobre esta versión</strong>
+      <p>
+        Información pendiente de completar con los datos del titular y las condiciones del
+        despliegue. No introduzcas datos personales reales para probar la compra.
+      </p>
+    </aside>
+    <article [attr.aria-label]="document.title">
+      @for (section of document.sections; track section.title) {
+        <section>
+          <h2>{{ section.title }}</h2>
+          @for (paragraph of section.paragraphs; track $index) {
+            <p>{{ paragraph }}</p>
+          }
+        </section>
+      }
+    </article>
+    <p class="reference">
+      Referencias:
+      <a
+        href="https://www.aepd.es/derechos-y-deberes/conoce-tus-derechos/derecho-de-informacion"
+        target="_blank"
+        rel="noopener noreferrer"
+        >derecho de información (AEPD) ↗</a
+      >
+      y
+      <a href="https://www.aepd.es/guias/guia-cookies.pdf" target="_blank" rel="noopener noreferrer"
+        >guía sobre cookies (AEPD) ↗</a
+      >.
+    </p>
+  }
+</main>

@@ -1,0 +1,101 @@
+:host {
+  display: block;
+  color: #172033;
+}
+* {
+  box-sizing: border-box;
+}
+.legal-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 24px max(5vw, 20px);
+  background: #fff;
+  border-bottom: 1px solid #e5e7e9;
+}
+a {
+  color: #5947a8;
+  text-underline-offset: 4px;
+}
+a:focus-visible {
+  outline: 3px solid #7966dc;
+  outline-offset: 4px;
+  border-radius: 3px;
+}
+.brand {
+  font-size: 25px;
+  font-weight: 800;
+  letter-spacing: -0.04em;
+  text-decoration: none;
+  color: #172033;
+}
+.brand span {
+  color: #7966dc;
+}
+.legal-main {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 64px 24px 72px;
+  overflow-wrap: anywhere;
+}
+.eyebrow {
+  font-size: 11px;
+  font-weight: 800;
+  color: #6656bf;
+  letter-spacing: 0.12em;
+}
+h1 {
+  font-size: clamp(32px, 5vw, 48px);
+  line-height: 1.1;
+  letter-spacing: -0.035em;
+  margin: 16px 0;
+}
+.intro {
+  font-size: 18px;
+  line-height: 1.7;
+  color: #555e6e;
+}
+.draft-note {
+  padding: 20px 24px;
+  margin: 32px 0;
+  background: #eeebfa;
+  border-left: 4px solid #7966dc;
+  border-radius: 0 12px 12px 0;
+  font-size: 14px;
+}
+.draft-note p {
+  margin: 8px 0 0;
+  line-height: 1.7;
+}
+article section {
+  padding: 22px 0;
+  border-bottom: 1px solid #e0e3e7;
+}
+h2 {
+  font-size: 23px;
+  margin: 0 0 16px;
+  letter-spacing: -0.025em;
+}
+article p {
+  color: #495365;
+  line-height: 1.8;
+  margin: 12px 0;
+}
+.reference {
+  font-size: 13px;
+  line-height: 1.8;
+  margin-top: 28px;
+}
+@media (max-width: 600px) {
+  .legal-main {
+    padding: 36px 20px 48px;
+  }
+  .legal-header {
+    font-size: 14px;
+  }
+  .draft-note {
+    padding: 16px;
+  }
+}

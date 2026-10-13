@@ -1,0 +1,24 @@
+{
+  "name": "tecnomovil-api",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "node --env-file=.env --watch dist/index.js",
+    "build": "tsc",
+    "start": "node --env-file=.env dist/index.js",
+    "db:init": "node --env-file=.env dist/migrate.js",
+    "db:images": "node --env-file=.env dist/update-product-images.js",
+    "admin:create": "node --env-file=.env dist/create-admin.js"
+  },
+  "dependencies": {
+    "express": "^5.1.0",
+    "pg": "^8.16.0",
+    "zod": "^3.25.0"
+  },
+  "devDependencies": {
+    "@types/express": "^5.0.0",
+    "@types/pg": "^8.15.0",
+    "@types/node": "^22.0.0",
+    "typescript": "~5.9.2"
+  }
+}

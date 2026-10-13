@@ -1,0 +1,13 @@
+:host {
+  display: block;
+  position: relative;
+  aspect-ratio: 1;
+  overflow: hidden;
+}
+
+img {
+  position: absolute;
+  display: block;
+  max-width: none;
+  object-fit: contain;
+}

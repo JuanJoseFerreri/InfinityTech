@@ -1,0 +1,531 @@
+<header class="topbar">
+  <a class="brand" routerLink="/" fragment="inicio" aria-label="InfinityTech inicio"
+    ><span>IT</span> Infinity<span>Tech</span></a
+  >
+  <nav aria-label="Navegación principal">
+    <a
+      routerLink="/"
+      fragment="tienda"
+      routerLinkActive="active-section"
+      [routerLinkActiveOptions]="sectionLinkOptions"
+      ariaCurrentWhenActive="location"
+      (click)="resetFilters()"
+      >Tienda</a
+    >
+    <a
+      routerLink="/"
+      fragment="categorias"
+      routerLinkActive="active-section"
+      [routerLinkActiveOptions]="sectionLinkOptions"
+      ariaCurrentWhenActive="location"
+      >Categorías</a
+    >
+    <a
+      routerLink="/"
+      fragment="beneficios"
+      routerLinkActive="active-section"
+      [routerLinkActiveOptions]="sectionLinkOptions"
+      ariaCurrentWhenActive="location"
+      >Ventajas</a
+    >
+    @if (auth.isAdmin()) {
+      <a routerLink="/admin">Panel de administrador</a>
+      <button class="session-button" type="button" (click)="logout()" [disabled]="signingOut()">
+        {{ signingOut() ? 'Cerrando…' : 'Cerrar sesión' }}
+      </button>
+    } @else if (!auth.checking()) {
+      <a routerLink="/login">Iniciar sesión</a>
+    }
+  </nav>
+  <button class="cart-button" (click)="cartOpen.set(true)" aria-label="Abrir carrito">
+    🛍️ <b>{{ cartCount() }}</b
+    ><span>Carrito</span>
+  </button>
+</header>
+@if (sessionError()) {
+  <p class="session-error" role="alert">{{ sessionError() }}</p>
+}
+
+<main id="inicio">
+  <section class="hero">
+    <div class="hero-copy">
+      <p class="eyebrow">TECNOLOGÍA QUE TE ACOMPAÑA</p>
+      <h1>La tecnología avanza.<br /><em>Descúbrelo aquí.</em></h1>
+      <p class="hero-text">
+        Los accesorios esenciales para conectar, crear y disfrutar sin límites.
+      </p>
+      <a class="primary-button" routerLink="/" fragment="tienda" (click)="resetFilters()"
+        >Explorar productos <span>→</span></a
+      >
+    </div>
+    <div class="hero-visual" aria-label="Ilustración de teléfono">
+      <div class="glow"></div>
+      <div class="phone">
+        <span>●</span><strong>{{ currentTime() }}</strong
+        ><small>◌</small>
+      </div>
+      <div class="spark s1">✦</div>
+      <div class="spark s2">✦</div>
+    </div>
+  </section>
+
+  <section class="category-directory" id="categorias" aria-labelledby="categories-title">
+    <div class="section-heading">
+      <div>
+        <p class="eyebrow">ENCUENTRA LO QUE BUSCAS</p>
+        <h2 id="categories-title">Categorías</h2>
+      </div>
+      <p>Tu próxima elección empieza aquí.</p>
+    </div>
+    <div class="category-tiles" [attr.aria-busy]="loading()">
+      @for (card of categoryCards(); track card.label) {
+        <a
+          class="category-tile"
+          routerLink="/"
+          fragment="tienda"
+          (click)="browseCategory(card)"
+          [attr.aria-label]="'Ver productos de ' + card.label"
+        >
+          <div class="category-art" aria-hidden="true">
+            @if (card.imageUrl) {
+              <app-product-image
+                [src]="card.imageUrl"
+                alt=""
+                loading="lazy"
+                (failed)="imageFailed(card.imageUrl)"
+              ></app-product-image>
+            } @else {
+              <span>{{ card.icon }}</span>
+            }
+          </div>
+          <h3>{{ card.label }}</h3>
+          <small>{{
+            loading()
+              ? 'Cargando…'
+              : catalogError()
+                ? 'Ver catálogo'
+                : card.count + (card.count === 1 ? ' producto' : ' productos')
+          }}</small>
+        </a>
+      }
+    </div>
+  </section>
+
+  <section class="shop" id="tienda">
+    <div class="section-heading">
+      <div>
+        <p class="eyebrow">DESCUBRE LO ÚLTIMO</p>
+        <h2>Todo para tu <em>móvil</em></h2>
+      </div>
+      <p>Pequeños accesorios.<br />Grandes posibilidades.</p>
+    </div>
+    <p class="catalog-note">
+      Novedades de 2026 primero · Incluye los anuncios de Apple de septiembre; consulta la
+      disponibilidad en cada ficha. Precios y existencias de demostración.
+    </p>
+    <div class="filters">
+      <div class="category-list" aria-label="Filtrar por tipo de producto">
+        @for (category of categories; track category) {
+          <button
+            type="button"
+            [class.active]="selectedCategory() === category"
+            [attr.aria-pressed]="selectedCategory() === category"
+            (click)="setCategory(category)"
+          >
+            {{ category }}
+          </button>
+        }
+      </div>
+      <label class="search"
+        ><span aria-hidden="true">⌕</span
+        ><input
+          type="search"
+          aria-label="Buscar producto"
+          [ngModel]="search()"
+          (ngModelChange)="updateSearch($event)"
+          placeholder="Buscar producto"
+      /></label>
+    </div>
+    <div class="brand-filters" aria-label="Filtrar por marca">
+      <span>Marca</span>
+      @for (brand of brands; track brand) {
+        <button
+          type="button"
+          [class.active]="selectedBrand() === brand"
+          [attr.aria-pressed]="selectedBrand() === brand"
+          (click)="setBrand(brand)"
+        >
+          {{ brand }}
+        </button>
+      }
+      @if (hasFilters()) {
+        <button class="clear-filters" type="button" (click)="resetFilters()">
+          Limpiar filtros ×
+        </button>
+      }
+      <small aria-live="polite"
+        >{{ filteredProducts().length }}
+        {{ filteredProducts().length === 1 ? 'producto' : 'productos' }}</small
+      >
+    </div>
+    @if (loading()) {
+      <p role="status">Cargando productos…</p>
+    }
+    @if (catalogError()) {
+      <p role="alert">{{ catalogError() }} <button (click)="loadProducts()">Reintentar</button></p>
+    }
+    <div class="product-grid" [attr.data-category]="selectedCategory()">
+      @for (
+        product of filteredProducts();
+        track product.id + '-' + categoryRevision();
+        let index = $index
+      ) {
+        <article
+          class="product-card"
+          (click)="onCardClick($event, product)"
+          [style.animation-delay]="index * 55 + 'ms'"
+        >
+          <div class="product-image">
+            @if (product.badge) {
+              <span class="badge">{{ product.badge }}</span>
+            }
+            @if (product.imageUrl && !failedImages().has(product.imageUrl)) {
+              <app-product-image
+                [src]="product.imageUrl"
+                [alt]="product.name"
+                loading="lazy"
+                (failed)="imageFailed(product.imageUrl)"
+              ></app-product-image>
+            } @else {
+              <span
+                class="product-icon"
+                role="img"
+                [attr.aria-label]="product.name + ': imagen no disponible'"
+                >{{ product.icon }}</span
+              >
+            }
+            <button
+              [disabled]="product.stock === 0"
+              (click)="addToCart(product)"
+              [attr.aria-label]="'Añadir ' + product.name"
+            >
+              +
+            </button>
+          </div>
+          <div class="product-info">
+            <p class="product-category">{{ product.brand }} · {{ product.category }}</p>
+            <h3>
+              <button
+                class="product-title-button"
+                type="button"
+                (click)="openProduct(product)"
+                [attr.aria-label]="'Ver detalles de ' + product.name"
+              >
+                {{ product.name }} <span aria-hidden="true">↗</span>
+              </button>
+            </h3>
+            <p class="product-description">{{ product.description }}</p>
+            <div class="product-detail">
+              <span>Lanzado en {{ product.releaseYear }}</span
+              ><a [href]="product.officialUrl" target="_blank" rel="noopener">Ficha oficial ↗</a>
+            </div>
+            <p>Stock: {{ product.stock }}</p>
+            <p class="price">{{ product.price | currency: 'EUR' : 'symbol' : '1.2-2' }}</p>
+          </div>
+        </article>
+      } @empty {
+        <div class="empty-results">
+          <span>⌕</span>
+          <h3>No hay productos para mostrar</h3>
+          <p>Prueba con otra búsqueda o categoría.</p>
+        </div>
+      }
+    </div>
+  </section>
+  <section class="advantages" id="beneficios" aria-labelledby="advantages-title">
+    <div class="section-heading">
+      <div>
+        <p class="eyebrow">COMPRA CON TRANQUILIDAD</p>
+        <h2 id="advantages-title">Tus <em>ventajas</em></h2>
+      </div>
+    </div>
+    <div class="benefits">
+      <div>
+        <span aria-hidden="true">🚚</span
+        ><span><b>Envío gratis</b><small>en pedidos de 50 € o más</small></span>
+      </div>
+      <div>
+        <span aria-hidden="true">↩️</span
+        ><span><b>Devoluciones fáciles</b><small>30 días para decidir</small></span>
+      </div>
+      <div>
+        <span aria-hidden="true">🔎</span
+        ><span
+          ><b>Elige con información</b
+          ><small>Compara productos, precios y disponibilidad</small></span
+        >
+      </div>
+      <div>
+        <span aria-hidden="true">🛍️</span
+        ><span
+          ><b>Compra sin registro</b
+          ><small>Haz tu pedido como invitado, sin crear una cuenta</small></span
+        >
+      </div>
+    </div>
+  </section>
+</main>
+
+@if (cartOpen()) {
+  <div class="overlay" (click)="cartOpen.set(false)"></div>
+  <aside class="cart-panel" aria-label="Carrito de compra">
+    <div class="panel-header">
+      <h2>
+        Tu carrito <span>{{ cartCount() }}</span>
+      </h2>
+      <button (click)="cartOpen.set(false)" aria-label="Cerrar">×</button>
+    </div>
+    @if (cartCount()) {
+      <div class="cart-items">
+        @for (item of cart(); track item.id) {
+          <div class="cart-item">
+            <div class="mini-image" [class]="item.color">
+              @if (item.imageUrl && !failedImages().has(item.imageUrl)) {
+                <app-product-image
+                  [src]="item.imageUrl"
+                  [alt]="item.name"
+                  loading="lazy"
+                  (failed)="imageFailed(item.imageUrl)"
+                ></app-product-image>
+              } @else {
+                {{ item.icon }}
+              }
+            </div>
+            <div>
+              <h3>{{ item.name }}</h3>
+              <p>{{ item.price | currency: 'EUR' : 'symbol' : '1.2-2' }}</p>
+              <div class="quantity">
+                <button (click)="changeQuantity(item.id, -1)">−</button><b>{{ item.quantity }}</b
+                ><button (click)="changeQuantity(item.id, 1)">+</button>
+              </div>
+            </div>
+            <button class="remove" (click)="remove(item.id)" aria-label="Eliminar">×</button>
+          </div>
+        }
+      </div>
+      <div class="cart-summary">
+        <p>
+          <span>Subtotal</span><b>{{ subtotal() | currency: 'EUR' : 'symbol' : '1.2-2' }}</b>
+        </p>
+        <p>
+          <span>Envío</span
+          ><b>{{ shipping() ? (shipping() | currency: 'EUR' : 'symbol' : '1.2-2') : 'Gratis' }}</b>
+        </p>
+        <p class="total">
+          <span>Total</span><b>{{ total() | currency: 'EUR' : 'symbol' : '1.2-2' }}</b>
+        </p>
+        <button class="primary-button wide" (click)="beginCheckout()">
+          Continuar con el pago →
+        </button>
+      </div>
+    } @else {
+      <div class="empty-cart">
+        <span>🛍️</span>
+        <h3>Tu carrito está vacío</h3>
+        <p>Añade algo que te encante.</p>
+        <button class="secondary-button" (click)="cartOpen.set(false)">Ir a la tienda</button>
+      </div>
+    }
+  </aside>
+}
+
+@if (checkoutOpen()) {
+  <div class="modal-backdrop">
+    <section class="checkout-modal">
+      @if (orderConfirmed()) {
+        <div class="confirmation">
+          <span>✓</span>
+          <p class="eyebrow">¡PEDIDO CONFIRMADO!</p>
+          <h2>Pedido guardado.</h2>
+          <p>
+            Referencia: {{ orderId() }}<br />Total: {{ orderTotal() | currency: 'EUR'
+            }}<br />Pendiente de pago. Esta demo no envía correos.
+          </p>
+          <button class="primary-button" (click)="closeCheckout()">Seguir comprando</button>
+        </div>
+      } @else {
+        <button class="modal-close" (click)="closeCheckout()" aria-label="Cerrar formulario">
+          ×
+        </button>
+        <p class="eyebrow">RESUMEN DE PEDIDO</p>
+        <h2>Un último paso.</h2>
+        <div class="checkout-total">
+          <span>Total a pagar</span><b>{{ total() | currency: 'EUR' : 'symbol' : '1.2-2' }}</b>
+        </div>
+        <p class="checkout-privacy">
+          Usa datos ficticios en este pedido de prueba. Consulta la
+          <a routerLink="/privacidad">política de privacidad</a> y las
+          <a routerLink="/condiciones">condiciones de compra</a>.
+        </p>
+        <form #checkoutForm="ngForm" (ngSubmit)="confirmOrder(checkoutForm)" novalidate>
+          <label
+            >Nombre completo<input
+              name="name"
+              type="text"
+              [(ngModel)]="checkout.name"
+              required
+              minlength="3"
+              #name="ngModel"
+              [class.invalid]="name.invalid && (name.touched || checkoutSubmitted())"
+              placeholder="Tu nombre y apellidos"
+          /></label>
+          @if (name.invalid && (name.touched || checkoutSubmitted())) {
+            <p class="field-error">Introduce al menos 3 caracteres.</p>
+          }
+          <label
+            >Correo electrónico<input
+              name="email"
+              type="email"
+              [(ngModel)]="checkout.email"
+              required
+              email
+              #email="ngModel"
+              [class.invalid]="email.invalid && (email.touched || checkoutSubmitted())"
+              placeholder="tu@email.com"
+          /></label>
+          @if (email.invalid && (email.touched || checkoutSubmitted())) {
+            <p class="field-error">Introduce un correo electrónico válido.</p>
+          }
+          <label
+            >Dirección de envío<input
+              name="address"
+              type="text"
+              [(ngModel)]="checkout.address"
+              required
+              minlength="10"
+              #address="ngModel"
+              [class.invalid]="address.invalid && (address.touched || checkoutSubmitted())"
+              placeholder="Calle, número, ciudad"
+          /></label>
+          @if (address.invalid && (address.touched || checkoutSubmitted())) {
+            <p class="field-error">Indica una dirección de al menos 10 caracteres.</p>
+          }
+          @if (orderError()) {
+            <p role="alert">{{ orderError() }}</p>
+          }
+          <button class="primary-button wide" type="submit" [disabled]="submitting()">
+            {{ submitting() ? 'Guardando…' : 'Confirmar pedido →' }}
+          </button>
+        </form>
+        <small>🔒 Pago simulado · Esta demo no procesa pagos reales.</small>
+      }
+    </section>
+  </div>
+}
+<dialog
+  #productDialog
+  class="product-dialog"
+  aria-labelledby="detail-title"
+  (click)="onBackdrop($event)"
+  (cancel)="closeProduct()"
+>
+  @if (selectedProduct(); as product) {
+    <button
+      class="detail-close"
+      type="button"
+      autofocus
+      aria-label="Cerrar detalle del producto"
+      (click)="closeProduct()"
+    >
+      ×
+    </button>
+    <div class="detail-layout">
+      <section class="detail-gallery" aria-label="Galería del producto">
+        <div class="detail-photo">
+          @if (selectedPhoto() && !failedImages().has(selectedPhoto())) {
+            <app-product-image
+              [src]="selectedPhoto()"
+              [alt]="product.name + ' · foto ' + (detailPhotos().indexOf(selectedPhoto()) + 1)"
+              (failed)="imageFailed(selectedPhoto())"
+            ></app-product-image>
+          } @else {
+            <p role="status">Imagen no disponible. Selecciona otra fotografía.</p>
+          }
+        </div>
+        <div class="thumbnails">
+          @for (photo of detailPhotos(); track photo; let i = $index) {
+            <button
+              type="button"
+              [class.active]="selectedPhoto() === photo"
+              [attr.aria-pressed]="selectedPhoto() === photo"
+              [attr.aria-label]="'Ver foto ' + (i + 1)"
+              (click)="selectedPhoto.set(photo)"
+            >
+              @if (!failedImages().has(photo)) {
+                <app-product-image
+                  [src]="photo"
+                  alt=""
+                  loading="lazy"
+                  (failed)="imageFailed(photo)"
+                ></app-product-image>
+              } @else {
+                <span>Foto {{ i + 1 }}</span>
+              }
+            </button>
+          }
+        </div>
+        <small
+          >Fotografías oficiales. Pueden mostrar distintos acabados o variantes de la gama.</small
+        >
+      </section>
+      <section class="detail-copy">
+        <p class="eyebrow">{{ product.brand }} · {{ product.category }}</p>
+        <h2 id="detail-title">{{ product.name }}</h2>
+        <p class="detail-description">{{ product.description }}</p>
+        <p class="detail-meta">
+          Lanzamiento: {{ product.releaseYear }} · {{ product.stock }} unidades disponibles
+        </p>
+        <p class="detail-price">{{ product.price | currency: 'EUR' : 'symbol' : '1.2-2' }}</p>
+        <button
+          type="button"
+          class="primary-button wide"
+          [disabled]="!canAdd(product)"
+          (click)="addFromDetail(product)"
+        >
+          {{
+            product.stock === 0
+              ? 'Agotado'
+              : !canAdd(product)
+                ? 'Límite de unidades en el carrito'
+                : 'Añadir al carrito'
+          }}
+        </button>
+        <a class="manufacturer-link" [href]="product.officialUrl" target="_blank" rel="noopener"
+          >Ver información del fabricante ↗</a
+        >
+        <section class="demo-reviews" aria-labelledby="reviews-title">
+          <h3 id="reviews-title">Valoraciones</h3>
+          <p class="review-disclaimer">
+            Opiniones ficticias para esta demo; no son reseñas de compradores reales.
+          </p>
+          <p>
+            <span class="stars" aria-hidden="true">★★★★☆</span>
+            <b>{{ demoAverage | number: '1.1-1' }}/5</b> · {{ demoReviews.length }} valoraciones
+            ficticias
+          </p>
+          @for (review of demoReviews; track review.author) {
+            <article class="review">
+              <div>
+                <b>{{ review.author }}</b
+                ><span class="stars" [attr.aria-label]="review.rating + ' de 5 estrellas'">{{
+                  stars(review.rating)
+                }}</span>
+              </div>
+              <p>{{ review.text }}</p>
+            </article>
+          }
+        </section>
+      </section>
+    </div>
+  }
+</dialog>

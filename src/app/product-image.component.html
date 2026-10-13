@@ -1,0 +1,12 @@
+<img
+  [src]="src()"
+  [alt]="alt()"
+  [loading]="loading()"
+  decoding="async"
+  referrerpolicy="no-referrer"
+  [style.width.%]="frame().width"
+  [style.height.%]="frame().height"
+  [style.left.%]="frame().left"
+  [style.top.%]="frame().top"
+  (error)="failed.emit(src())"
+/>

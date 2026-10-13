@@ -1,0 +1,101 @@
+<header>
+  <a routerLink="/">← Volver a la tienda</a>
+  <h1>Administración · InfinityTech</h1>
+  @if (authenticated()) {
+    <button (click)="logout()" [disabled]="busy()">Cerrar sesión</button>
+  }
+</header>
+<main>
+  @if (error()) {
+    <p role="alert" class="error">{{ error() }}</p>
+  }
+  @if (notice()) {
+    <p role="status" class="success">{{ notice() }}</p>
+  }
+  @if (checking()) {
+    <p role="status">Comprobando sesión…</p>
+  } @else if (!authenticated()) {
+    <p>No se pudo validar el acceso. <a routerLink="/login">Ir a iniciar sesión</a></p>
+  } @else {
+    <div class="section-title">
+      <h2>Productos</h2>
+      <button (click)="reload()" [disabled]="busy()">Recargar datos</button>
+    </div>
+    <p>Precio en euros. El stock representa unidades disponibles.</p>
+    <div class="products">
+      @for (p of products(); track p.id) {
+        <form #productForm="ngForm" (ngSubmit)="save(p)">
+          <label
+            >Nombre<input name="name" [(ngModel)]="p.name" required minlength="2" maxlength="150"
+          /></label>
+          <label
+            >Descripción<textarea
+              name="description"
+              [(ngModel)]="p.description"
+              required
+              minlength="3"
+              maxlength="1000"
+            ></textarea>
+          </label>
+          <div class="row">
+            <label
+              >Precio (€)<input
+                name="price"
+                type="number"
+                step="0.01"
+                min="0.01"
+                max="100000"
+                required
+                [(ngModel)]="p.price"
+            /></label>
+            <label
+              >Stock<input
+                name="stock"
+                type="number"
+                step="1"
+                min="0"
+                max="100000"
+                required
+                [(ngModel)]="p.stock"
+            /></label>
+          </div>
+          <button [disabled]="busy() || productForm.invalid">Guardar producto</button>
+        </form>
+      }
+    </div>
+    <h2>Pedidos</h2>
+    @for (order of orders(); track order.id) {
+      <article>
+        <div class="section-title">
+          <strong>{{ order.customer_name }}</strong
+          ><span class="badge">{{ label(order.status) }}</span>
+        </div>
+        <p class="reference">{{ order.id }} · {{ order.created_at | date: 'dd/MM/yyyy HH:mm' }}</p>
+        <p>{{ order.email }}<br />{{ order.address }}</p>
+        <ul>
+          @for (item of order.items; track $index) {
+            <li>
+              {{ item.quantity }} × {{ item.name }} · {{ item.price_cents / 100 | currency: 'EUR' }}
+            </li>
+          }
+        </ul>
+        <strong>Total: {{ order.total_cents / 100 | currency: 'EUR' }}</strong>
+        @if (order.status === 'pending') {
+          <div class="actions">
+            <button (click)="setStatus(order, 'paid')" [disabled]="busy()">Marcar pagado</button>
+            <button class="danger" (click)="setStatus(order, 'cancelled')" [disabled]="busy()">
+              Cancelar y reponer stock
+            </button>
+          </div>
+        }
+      </article>
+    } @empty {
+      <p>No hay pedidos en esta página.</p>
+    }
+    <div class="actions">
+      <button (click)="changePage(-1)" [disabled]="busy() || page() === 1">Anterior</button>
+      <span>Página {{ page() }}</span
+      ><button (click)="changePage(1)" [disabled]="busy() || !hasMore()">Siguiente</button>
+    </div>
+  }
+</main>

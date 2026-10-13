@@ -1,0 +1,752 @@
+[
+  {
+    "id": 125,
+    "name": "iPhone Duo",
+    "url": "https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/iphone-duo-finish-select-star-white-202609?wid=1200&hei=1200&fmt=png-alpha",
+    "page": "https://www.apple.com/shop/buy-iphone/iphone-duo",
+    "path": "/imgs/products/iphone-duo-1.png",
+    "width": 1200,
+    "height": 1200,
+    "bounds": [
+      102,
+      276,
+      1097,
+      923
+    ]
+  },
+  {
+    "id": 126,
+    "name": "iPhone 18 Pro",
+    "url": "https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/iphone-18-pro-finish-select-burgundy-202609?wid=1200&hei=1200&fmt=png-alpha",
+    "page": "https://www.apple.com/shop/buy-iphone/iphone-18-pro",
+    "path": "/imgs/products/iphone-18-pro-1.png",
+    "width": 1200,
+    "height": 1200,
+    "bounds": [
+      221,
+      181,
+      980,
+      1096
+    ]
+  },
+  {
+    "id": 127,
+    "name": "iPhone 18 Pro Max",
+    "url": "https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/iphone-18-pro-max-finish-select-glacier-202609?wid=1200&hei=1200&fmt=png-alpha",
+    "page": "https://www.apple.com/shop/buy-iphone/iphone-18-pro",
+    "path": "/imgs/products/iphone-18-pro-max-1.png",
+    "width": 1200,
+    "height": 1200,
+    "bounds": [
+      192,
+      98,
+      1008,
+      1096
+    ]
+  },
+  {
+    "id": 128,
+    "name": "Apple Watch Series 12",
+    "url": "https://www.apple.com/v/apple-watch-ultra-4/a/images/overview/contrast/contrast_s12__os0o0gt226ym_large_2x.png",
+    "page": "https://www.apple.com/apple-watch-ultra-4/",
+    "path": "/imgs/products/apple-watch-series-12-1.png",
+    "width": 588,
+    "height": 654,
+    "bounds": [
+      27,
+      34,
+      545,
+      648
+    ]
+  },
+  {
+    "id": 129,
+    "name": "Apple Watch Ultra 4",
+    "url": "https://www.apple.com/v/apple-watch-ultra-4/a/images/overview/contrast/compare_ultra4__d5x92dr0j3sm_large_2x.png",
+    "page": "https://www.apple.com/apple-watch-ultra-4/",
+    "path": "/imgs/products/apple-watch-ultra-4-1.png",
+    "width": 588,
+    "height": 654,
+    "bounds": [
+      3,
+      4,
+      584,
+      651
+    ]
+  },
+  {
+    "id": 130,
+    "name": "AirPods 5",
+    "url": "https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/airpods-5-hero-select-202609?wid=1200&hei=1200&fmt=png-alpha",
+    "page": "https://www.apple.com/shop/buy-airpods/airpods-5",
+    "path": "/imgs/products/airpods-5-1.png",
+    "width": 1200,
+    "height": 1200,
+    "bounds": [
+      323,
+      201,
+      877,
+      1014
+    ]
+  },
+  {
+    "id": 1,
+    "name": "iPhone 17 Pro",
+    "url": "https://cdsassets.apple.com/live/7WUAS350/images/iphone/iphone-17-pro-colors.png",
+    "page": "https://support.apple.com/es-es/108044",
+    "path": "/imgs/products/iphone-17-pro-1.png",
+    "width": 939,
+    "height": 659,
+    "bounds": [
+      0,
+      0,
+      939,
+      659
+    ]
+  },
+  {
+    "id": 4,
+    "name": "AirPods Pro 3",
+    "url": "https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/airpods-pro-3-hero-select-202509?wid=900&hei=900&fmt=png-alpha",
+    "page": "https://www.apple.com/es/shop/buy-airpods/airpods-pro-3",
+    "path": "/imgs/products/airpods-pro-3-1.png",
+    "width": 900,
+    "height": 900,
+    "bounds": [
+      137,
+      146,
+      762,
+      832
+    ]
+  },
+  {
+    "id": 2,
+    "name": "Galaxy S25 Ultra",
+    "url": "https://images.samsung.com/is/image/samsung/p6pim/es/2501/gallery/es-galaxy-s25-s938-sm-s938bzkdeub-544741354?fmt=png-alpha&wid=900&hei=900",
+    "page": "https://www.samsung.com/es/smartphones/galaxy-s25-ultra/buy/",
+    "path": "/imgs/products/galaxy-s25-ultra-1.png",
+    "width": 900,
+    "height": 900,
+    "bounds": [
+      163,
+      185,
+      689,
+      715
+    ]
+  },
+  {
+    "id": 8,
+    "name": "Galaxy S25",
+    "url": "https://images.samsung.com/is/image/samsung/p6pim/es/2501/gallery/es-galaxy-s25-s931-534591-sm-s931bdbdeub-544740553?fmt=png-alpha&wid=900&hei=900",
+    "page": "https://www.samsung.com/es/smartphones/galaxy-s25/buy/",
+    "path": "/imgs/products/galaxy-s25-1.png",
+    "width": 900,
+    "height": 900,
+    "bounds": [
+      252,
+      211,
+      647,
+      689
+    ]
+  },
+  {
+    "id": 103,
+    "name": "Galaxy S26",
+    "url": "https://images.samsung.com/is/image/samsung/p6pim/us/s2602/gallery/us-galaxy-s26-s942-sm-s942ulbeatt-550994287?fmt=png-alpha&wid=900&hei=900",
+    "page": "https://www.samsung.com/us/business/smartphones/galaxy-s26-plus/buy/galaxy-s26-plus-256gb-at-t-sku-sm-s947uzwaatt",
+    "path": "/imgs/products/galaxy-s26-1.png",
+    "width": 900,
+    "height": 900,
+    "bounds": [
+      250,
+      208,
+      651,
+      692
+    ]
+  },
+  {
+    "id": 103,
+    "name": "Galaxy S26",
+    "url": "https://images.samsung.com/is/image/samsung/p6pim/us/s2602/gallery/us-galaxy-s26-s942-sm-s942ulbeatt-550994270?fmt=png-alpha&wid=900&hei=900",
+    "page": "https://www.samsung.com/us/business/smartphones/galaxy-s26-plus/buy/galaxy-s26-plus-256gb-at-t-sku-sm-s947uzwaatt",
+    "path": "/imgs/products/galaxy-s26-2.png",
+    "width": 900,
+    "height": 900,
+    "bounds": [
+      332,
+      208,
+      566,
+      692
+    ]
+  },
+  {
+    "id": 104,
+    "name": "Galaxy S26+",
+    "url": "https://images.samsung.com/is/image/samsung/p6pim/us/s2602/gallery/us-galaxy-s26-s947-sm-s947uzwaatt-550995052?fmt=png-alpha&wid=900&hei=900",
+    "page": "https://www.samsung.com/us/business/smartphones/galaxy-s26-plus/buy/galaxy-s26-plus-256gb-at-t-sku-sm-s947uzwaatt",
+    "path": "/imgs/products/galaxy-s26-plus-1.png",
+    "width": 900,
+    "height": 900,
+    "bounds": [
+      241,
+      194,
+      659,
+      706
+    ]
+  },
+  {
+    "id": 104,
+    "name": "Galaxy S26+",
+    "url": "https://images.samsung.com/is/image/samsung/p6pim/us/s2602/gallery/us-galaxy-s26-s947-sm-s947uzwaatt-550995035?fmt=png-alpha&wid=900&hei=900",
+    "page": "https://www.samsung.com/us/business/smartphones/galaxy-s26-plus/buy/galaxy-s26-plus-256gb-at-t-sku-sm-s947uzwaatt",
+    "path": "/imgs/products/galaxy-s26-plus-2.png",
+    "width": 900,
+    "height": 900,
+    "bounds": [
+      326,
+      194,
+      573,
+      706
+    ]
+  },
+  {
+    "id": 105,
+    "name": "Galaxy S26 Ultra",
+    "url": "https://images.samsung.com/is/image/samsung/p6pim/us/s2602/gallery/us-galaxy-s26-ultra-s948-sm-s948ulbaatt-550992840?fmt=png-alpha&wid=900&hei=900",
+    "page": "https://www.samsung.com/us/smartphones/galaxy-s26-ultra/buy/",
+    "path": "/imgs/products/galaxy-s26-ultra-1.png",
+    "width": 900,
+    "height": 900,
+    "bounds": [
+      166,
+      185,
+      689,
+      716
+    ]
+  },
+  {
+    "id": 105,
+    "name": "Galaxy S26 Ultra",
+    "url": "https://images.samsung.com/is/image/samsung/p6pim/us/s2602/gallery/us-galaxy-s26-ultra-s948-sm-s948ulbaatt-550992821?fmt=png-alpha&wid=900&hei=900",
+    "page": "https://www.samsung.com/us/smartphones/galaxy-s26-ultra/buy/",
+    "path": "/imgs/products/galaxy-s26-ultra-2.png",
+    "width": 900,
+    "height": 900,
+    "bounds": [
+      335,
+      175,
+      564,
+      725
+    ]
+  },
+  {
+    "id": 106,
+    "name": "Galaxy Z Fold8",
+    "url": "https://images.samsung.com/is/image/samsung/p6pim/us/f2607/gallery/us-galaxy-z-fold8-f971-600257-sm-f971ulvaatt-553840886?fmt=png-alpha&wid=900&hei=900",
+    "page": "https://www.samsung.com/us/smartphones/galaxy-z-fold8/buy/",
+    "path": "/imgs/products/galaxy-z-fold8-1.png",
+    "width": 900,
+    "height": 900,
+    "bounds": [
+      84,
+      173,
+      808,
+      728
+    ]
+  },
+  {
+    "id": 106,
+    "name": "Galaxy Z Fold8",
+    "url": "https://images.samsung.com/is/image/samsung/p6pim/us/f2607/gallery/us-galaxy-z-fold8-f971-600257-sm-f971ulvaatt-553840873?fmt=png-alpha&wid=900&hei=900",
+    "page": "https://www.samsung.com/us/smartphones/galaxy-z-fold8/buy/",
+    "path": "/imgs/products/galaxy-z-fold8-2.png",
+    "width": 900,
+    "height": 900,
+    "bounds": [
+      284,
+      173,
+      610,
+      728
+    ]
+  },
+  {
+    "id": 107,
+    "name": "Galaxy Z Fold8 Ultra",
+    "url": "https://images.samsung.com/is/image/samsung/p6pim/us/f2607/gallery/us-galaxy-z-fold8-ultra-f976-600251-sm-f976udgaxaa-553838537?fmt=png-alpha&wid=900&hei=900",
+    "page": "https://www.samsung.com/us/smartphones/galaxy-z-fold8-ultra/buy/",
+    "path": "/imgs/products/galaxy-z-fold8-ultra-1.png",
+    "width": 900,
+    "height": 900,
+    "bounds": [
+      245,
+      173,
+      655,
+      727
+    ]
+  },
+  {
+    "id": 107,
+    "name": "Galaxy Z Fold8 Ultra",
+    "url": "https://images.samsung.com/is/image/samsung/p6pim/us/f2607/gallery/us-galaxy-z-fold8-ultra-f976-600251-sm-f976udgaxaa-553838520?fmt=png-alpha&wid=900&hei=900",
+    "page": "https://www.samsung.com/us/smartphones/galaxy-z-fold8-ultra/buy/",
+    "path": "/imgs/products/galaxy-z-fold8-ultra-2.png",
+    "width": 900,
+    "height": 900,
+    "bounds": [
+      337,
+      173,
+      564,
+      726
+    ]
+  },
+  {
+    "id": 108,
+    "name": "Galaxy Z Flip8",
+    "url": "https://images.samsung.com/is/image/samsung/p6pim/de/f2607/gallery/de-galaxy-zflip8-f776-sm-f776bzkgeub-thumb-553746821?fmt=png-alpha&wid=900&hei=900",
+    "page": "https://www.samsung.com/de/business/smartphones/galaxy-z/galaxy-z-flip8-graphite-256gb-sm-f776bzkgeub/",
+    "path": "/imgs/products/galaxy-z-flip8-1.png",
+    "width": 900,
+    "height": 900,
+    "bounds": [
+      325,
+      292,
+      577,
+      608
+    ]
+  },
+  {
+    "id": 109,
+    "name": "Galaxy S26 FE",
+    "url": "https://images.samsung.com/is/image/samsung/p6pim/latin_en/sm-s741bzkkgto/gallery/latin-en-galaxy-s26-fe-sm-s741-sm-s741bzkkgto-554467856?fmt=png-alpha&wid=900&hei=900",
+    "page": "https://www.samsung.com/latin_en/business/smartphones/galaxy-s/galaxy-s26-fe-graphite-256gb-sm-s741bzkkgto/",
+    "path": "/imgs/products/galaxy-s26-fe-1.png",
+    "width": 900,
+    "height": 900,
+    "bounds": [
+      232,
+      188,
+      665,
+      712
+    ]
+  },
+  {
+    "id": 109,
+    "name": "Galaxy S26 FE",
+    "url": "https://images.samsung.com/is/image/samsung/p6pim/latin_en/sm-s741bzkkgto/gallery/latin-en-galaxy-s26-fe-sm-s741-sm-s741bzkkgto-554467847?fmt=png-alpha&wid=900&hei=900",
+    "page": "https://www.samsung.com/latin_en/business/smartphones/galaxy-s/galaxy-s26-fe-graphite-256gb-sm-s741bzkkgto/",
+    "path": "/imgs/products/galaxy-s26-fe-2.png",
+    "width": 900,
+    "height": 900,
+    "bounds": [
+      108,
+      176,
+      792,
+      723
+    ]
+  },
+  {
+    "id": 112,
+    "name": "Galaxy A57 5G",
+    "url": "https://images.samsung.com/is/image/samsung/p6pim/es/sm-a576blbheub/gallery/es-galaxy-a57-5g-sm-a576-sm-a576blbheub-thumb-551746446?fmt=png-alpha&wid=900&hei=900",
+    "page": "https://www.samsung.com/es/smartphones/galaxy-a/galaxy-a57-5g-awesome-icyblue-512gb-sm-a576blbheub/",
+    "path": "/imgs/products/galaxy-a57-5g-1.png",
+    "width": 900,
+    "height": 900,
+    "bounds": [
+      331,
+      306,
+      571,
+      594
+    ]
+  },
+  {
+    "id": 113,
+    "name": "Galaxy A37 5G",
+    "url": "https://images.samsung.com/is/image/samsung/p6pim/es/sm-a376bzabeub/gallery/es-galaxy-a37-5g-sm-a376-sm-a376bzabeub-thumb-551745742?fmt=png-alpha&wid=900&hei=900",
+    "page": "https://www.samsung.com/es/smartphones/galaxy-a/galaxy-a37-5g-awesome-charcoal-128gb-sm-a376bzabeub/",
+    "path": "/imgs/products/galaxy-a37-5g-1.png",
+    "width": 900,
+    "height": 900,
+    "bounds": [
+      329,
+      304,
+      572,
+      596
+    ]
+  },
+  {
+    "id": 3,
+    "name": "Xiaomi 15 Ultra",
+    "url": "https://i05.appmifile.com/740_item_es/25/02/2025/688eb3b93b0eaff807341869f8ba031e.png",
+    "page": "https://www.mi.com/es/support/faq/details/KA-776974/",
+    "path": "/imgs/products/xiaomi-15-ultra-1.png",
+    "width": 1600,
+    "height": 1600,
+    "bounds": [
+      256,
+      154,
+      1343,
+      1445
+    ]
+  },
+  {
+    "id": 5,
+    "name": "Galaxy Buds3 FE",
+    "url": "https://images.samsung.com/is/image/samsung/p6pim/es/sm-r420nzaaeub/gallery/es-galaxy-buds3-fe-sm-r420nzaaeub-548587131?fmt=png-alpha&wid=900&hei=900",
+    "page": "https://www.samsung.com/es/audio-sound/galaxy-buds/galaxy-buds3-fe-gray-sm-r420nzaaeub/",
+    "path": "/imgs/products/galaxy-buds3-fe-1.png",
+    "width": 900,
+    "height": 900,
+    "bounds": [
+      113,
+      209,
+      785,
+      695
+    ]
+  },
+  {
+    "id": 110,
+    "name": "Galaxy Buds4",
+    "url": "https://images.samsung.com/is/image/samsung/p6pim/es/s2602/gallery/es-galaxy-buds4-r540-sm-r540nzkaeub-551013222?fmt=png-alpha&wid=900&hei=900",
+    "page": "https://www.samsung.com/es/audio-sound/galaxy-buds/galaxy-buds4-black-sm-r540nzkaeub/",
+    "path": "/imgs/products/galaxy-buds4-1.png",
+    "width": 900,
+    "height": 900,
+    "bounds": [
+      147,
+      210,
+      754,
+      694
+    ]
+  },
+  {
+    "id": 111,
+    "name": "Galaxy Buds4 Pro",
+    "url": "https://images.samsung.com/is/image/samsung/p6pim/es/s2602/gallery/es-galaxy-buds4-r640-sm-r640nzkaeub-551037324?fmt=png-alpha&wid=900&hei=900",
+    "page": "https://www.samsung.com/es/audio-sound/galaxy-buds/galaxy-buds4-pro-black-sm-r640nzkaeub/",
+    "path": "/imgs/products/galaxy-buds4-pro-1.png",
+    "width": 900,
+    "height": 900,
+    "bounds": [
+      120,
+      210,
+      779,
+      694
+    ]
+  },
+  {
+    "id": 116,
+    "name": "Xiaomi 17",
+    "url": "https://i05.appmifile.com/9_item_es/10/02/2026/d1b164685c9d55d999060ac21de66446.png",
+    "page": "https://www.mi.com/es/product/xiaomi-17/",
+    "path": "/imgs/products/xiaomi-17-1.png",
+    "width": 1600,
+    "height": 1600,
+    "bounds": [
+      250,
+      153,
+      1349,
+      1447
+    ]
+  },
+  {
+    "id": 117,
+    "name": "Xiaomi 17 Ultra",
+    "url": "https://i05.appmifile.com/847_item_es/10/02/2026/23a54f57d75631c9f7a31e14b1ea4b13.png",
+    "page": "https://www.mi.com/es/product/xiaomi-17-ultra/",
+    "path": "/imgs/products/xiaomi-17-ultra-1.png",
+    "width": 1600,
+    "height": 1600,
+    "bounds": [
+      254,
+      155,
+      1345,
+      1444
+    ]
+  },
+  {
+    "id": 118,
+    "name": "Xiaomi Watch 5",
+    "url": "https://i05.appmifile.com/322_item_es/11/02/2026/d1d8ad8454ba94a48b301aefd96ee4dc.png",
+    "page": "https://www.mi.com/es/product/xiaomi-watch-5/",
+    "path": "/imgs/products/xiaomi-watch-5-1.png",
+    "width": 1600,
+    "height": 1600,
+    "bounds": [
+      423,
+      211,
+      1177,
+      1388
+    ]
+  },
+  {
+    "id": 119,
+    "name": "REDMI Buds 8 Pro",
+    "url": "https://i05.appmifile.com/859_item_es/03/02/2026/558083bfa53dbba71414b89bc49576cf.png",
+    "page": "https://www.mi.com/es/product/redmi-buds-8-pro/",
+    "path": "/imgs/products/redmi-buds-8-pro-1.png",
+    "width": 1600,
+    "height": 1600,
+    "bounds": [
+      309,
+      241,
+      1290,
+      1359
+    ]
+  },
+  {
+    "id": 120,
+    "name": "REDMI Note 15",
+    "url": "https://i05.appmifile.com/850_item_es/05/01/2026/77b3e80f9280ce0ba2ed783cf3456ec4.png",
+    "page": "https://www.mi.com/es/product/redmi-note-15/",
+    "path": "/imgs/products/redmi-note-15-1.png",
+    "width": 1600,
+    "height": 1600,
+    "bounds": [
+      253,
+      155,
+      1344,
+      1447
+    ]
+  },
+  {
+    "id": 121,
+    "name": "REDMI Note 15 5G",
+    "url": "https://i05.appmifile.com/325_item_es/26/12/2025/11dba12431bc7a2534bed031eb032888.png",
+    "page": "https://www.mi.com/es/product/redmi-note-15-5g/",
+    "path": "/imgs/products/redmi-note-15-5g-1.png",
+    "width": 1600,
+    "height": 1600,
+    "bounds": [
+      256,
+      154,
+      1343,
+      1446
+    ]
+  },
+  {
+    "id": 122,
+    "name": "REDMI Note 15 Pro",
+    "url": "https://i05.appmifile.com/626_item_es/26/12/2025/ffae6c838f1300ad1edfdff1ea970877.png",
+    "page": "https://www.mi.com/es/product/redmi-note-15-pro/",
+    "path": "/imgs/products/redmi-note-15-pro-1.png",
+    "width": 1600,
+    "height": 1600,
+    "bounds": [
+      256,
+      153,
+      1344,
+      1446
+    ]
+  },
+  {
+    "id": 123,
+    "name": "REDMI Note 15 Pro 5G",
+    "url": "https://i05.appmifile.com/102_item_es/05/01/2026/372a14d41feed114586061018f3254a5.png",
+    "page": "https://www.mi.com/es/product/redmi-note-15-pro-5g/",
+    "path": "/imgs/products/redmi-note-15-pro-5g-1.png",
+    "width": 1600,
+    "height": 1600,
+    "bounds": [
+      256,
+      154,
+      1344,
+      1446
+    ]
+  },
+  {
+    "id": 124,
+    "name": "REDMI Note 15 Pro+ 5G",
+    "url": "https://i05.appmifile.com/759_item_es/26/12/2025/ae87cb87e62051e3d7dbee1e46866cab.png",
+    "page": "https://www.mi.com/es/product/redmi-note-15-pro-plus-5g/",
+    "path": "/imgs/products/redmi-note-15-pro-plus-5g-1.png",
+    "width": 1600,
+    "height": 1600,
+    "bounds": [
+      256,
+      154,
+      1344,
+      1446
+    ]
+  },
+  {
+    "id": 6,
+    "name": "Xiaomi Watch S4",
+    "url": "https://i05.appmifile.com/458_item_es/26/02/2025/a7a34bf5e22132381786898457194436.png",
+    "page": "https://www.mi.com/es/product/xiaomi-watch-s4/",
+    "path": "/imgs/products/xiaomi-watch-s4-1.png",
+    "width": 1600,
+    "height": 1600,
+    "bounds": [
+      438,
+      214,
+      1162,
+      1386
+    ]
+  },
+  {
+    "id": 9,
+    "name": "Xiaomi Buds 5 Pro",
+    "url": "https://i05.appmifile.com/830_item_es/26/02/2025/bebda10fb806c7f00b7c68f66e77efc6.png",
+    "page": "https://www.mi.com/es/product/xiaomi-buds-5-pro/",
+    "path": "/imgs/products/xiaomi-buds-5-pro-1.png",
+    "width": 1600,
+    "height": 1600,
+    "bounds": [
+      302,
+      316,
+      1298,
+      1283
+    ]
+  },
+  {
+    "id": 7,
+    "name": "iPhone 17",
+    "url": "https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/iphone-17-finish-select-sage-202509?wid=900&hei=900&fmt=png-alpha",
+    "page": "https://www.apple.com/es/shop/buy-iphone/iphone-17",
+    "path": "/imgs/products/iphone-17-1.png",
+    "width": 900,
+    "height": 900,
+    "bounds": [
+      255,
+      138,
+      645,
+      822
+    ]
+  },
+  {
+    "id": 7,
+    "name": "iPhone 17",
+    "url": "https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/iphone-17-finish-select-mistblue-202509?wid=900&hei=900&fmt=png-alpha",
+    "page": "https://www.apple.com/es/shop/buy-iphone/iphone-17",
+    "path": "/imgs/products/iphone-17-2.png",
+    "width": 900,
+    "height": 900,
+    "bounds": [
+      255,
+      138,
+      645,
+      822
+    ]
+  },
+  {
+    "id": 101,
+    "name": "iPhone 17e",
+    "url": "https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/iphone-17e-finish-select-softpink-202603?wid=900&hei=900&fmt=png-alpha",
+    "page": "https://www.apple.com/es/shop/buy-iphone/iphone-17e",
+    "path": "/imgs/products/iphone-17e-1.png",
+    "width": 900,
+    "height": 900,
+    "bounds": [
+      142,
+      75,
+      758,
+      825
+    ]
+  },
+  {
+    "id": 101,
+    "name": "iPhone 17e",
+    "url": "https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/iphone-17e-finish-select-black-202603?wid=900&hei=900&fmt=png-alpha",
+    "page": "https://www.apple.com/es/shop/buy-iphone/iphone-17e",
+    "path": "/imgs/products/iphone-17e-2.png",
+    "width": 900,
+    "height": 900,
+    "bounds": [
+      142,
+      75,
+      758,
+      825
+    ]
+  },
+  {
+    "id": 102,
+    "name": "AirPods Max 2",
+    "url": "https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/airpods-max-select-202409-midnight_FV1?wid=900&hei=900&fmt=png-alpha",
+    "page": "https://www.apple.com/es/shop/buy-airpods/airpods-max-2",
+    "path": "/imgs/products/airpods-max-2-1.png",
+    "width": 900,
+    "height": 900,
+    "bounds": [
+      1,
+      162,
+      899,
+      832
+    ]
+  },
+  {
+    "id": 102,
+    "name": "AirPods Max 2",
+    "url": "https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/airpods-max-select-202409-blue_FV1?wid=900&hei=900&fmt=png-alpha",
+    "page": "https://www.apple.com/es/shop/buy-airpods/airpods-max-2",
+    "path": "/imgs/products/airpods-max-2-2.png",
+    "width": 900,
+    "height": 900,
+    "bounds": [
+      1,
+      162,
+      899,
+      832
+    ]
+  },
+  {
+    "id": 114,
+    "name": "Galaxy Watch9",
+    "url": "https://images.samsung.com/is/image/samsung/p6pim/us/sm-l340nzeaxaa/gallery/us-galaxy-watch9-l340-sm-l340nzeaxaa-554054538?fmt=png-alpha&wid=900&hei=900",
+    "page": "https://www.samsung.com/us/watches/galaxy-watch9/buy/",
+    "path": "/imgs/products/galaxy-watch9-1.png",
+    "width": 900,
+    "height": 900,
+    "bounds": [
+      220,
+      181,
+      681,
+      719
+    ]
+  },
+  {
+    "id": 114,
+    "name": "Galaxy Watch9",
+    "url": "https://images.samsung.com/is/image/samsung/p6pim/us/sm-l340nzeaxaa/gallery/us-galaxy-watch9-l340-sm-l340nzeaxaa-554054548?fmt=png-alpha&wid=900&hei=900",
+    "page": "https://www.samsung.com/us/watches/galaxy-watch9/buy/",
+    "path": "/imgs/products/galaxy-watch9-2.png",
+    "width": 900,
+    "height": 900,
+    "bounds": [
+      289,
+      181,
+      612,
+      719
+    ]
+  },
+  {
+    "id": 115,
+    "name": "Galaxy Watch Ultra2",
+    "url": "https://images.samsung.com/is/image/samsung/p6pim/us/sm-l715uzkaxaa/gallery/us-galaxy-watch-ultra2-l710-sm-l715uzkaxaa-554054142?fmt=png-alpha&wid=900&hei=900",
+    "page": "https://www.samsung.com/us/watches/galaxy-watch-ultra2/buy/",
+    "path": "/imgs/products/galaxy-watch-ultra2-1.png",
+    "width": 900,
+    "height": 900,
+    "bounds": [
+      215,
+      181,
+      685,
+      722
+    ]
+  },
+  {
+    "id": 115,
+    "name": "Galaxy Watch Ultra2",
+    "url": "https://images.samsung.com/is/image/samsung/p6pim/us/sm-l715uzkaxaa/gallery/us-galaxy-watch-ultra2-l710-sm-l715uzkaxaa-554054146?fmt=png-alpha&wid=900&hei=900",
+    "page": "https://www.samsung.com/us/watches/galaxy-watch-ultra2/buy/",
+    "path": "/imgs/products/galaxy-watch-ultra2-2.png",
+    "width": 900,
+    "height": 900,
+    "bounds": [
+      277,
+      181,
+      623,
+      722
+    ]
+  }
+]

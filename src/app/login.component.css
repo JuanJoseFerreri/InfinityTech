@@ -1,0 +1,123 @@
+:host {
+  display: block;
+  min-height: 100dvh;
+  background: #f8f8f6;
+  color: #172033;
+}
+* {
+  box-sizing: border-box;
+}
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 24px max(5vw, 20px);
+  background: white;
+  border-bottom: 1px solid #e5e7e9;
+}
+a {
+  color: #6656bf;
+  text-underline-offset: 4px;
+  font-size: 14px;
+}
+.brand {
+  font-size: 24px;
+  font-weight: 800;
+  letter-spacing: -0.04em;
+  color: #172033;
+  text-decoration: none;
+}
+main {
+  display: grid;
+  place-items: center;
+  padding: 64px 20px;
+}
+.login-card {
+  width: min(100%, 440px);
+  padding: 36px;
+  border: 1px solid #e5e7e9;
+  border-radius: 20px;
+  background: #fff;
+  box-shadow: 0 16px 48px #17203308;
+}
+.eyebrow {
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  color: #7664d6;
+  margin: 0 0 12px;
+}
+h1 {
+  font-size: 32px;
+  line-height: 1.15;
+  letter-spacing: -0.03em;
+  margin: 0 0 16px;
+  font-weight: 800;
+}
+.intro {
+  font-size: 16px;
+  line-height: 1.5;
+  color: #606776;
+  margin-bottom: 28px;
+}
+label {
+  display: block;
+  font-size: 14px;
+  font-weight: 700;
+  margin: 18px 0 8px;
+}
+input {
+  width: 100%;
+  border: 1px solid #cbd0d9;
+  border-radius: 9px;
+  padding: 12px;
+  font: inherit;
+  min-height: 46px;
+}
+button {
+  width: 100%;
+  margin-top: 24px;
+  min-height: 48px;
+  padding: 12px;
+  border: 0;
+  border-radius: 9px;
+  background: #172033;
+  color: white;
+  font: inherit;
+  font-weight: 800;
+  cursor: pointer;
+}
+button:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+:is(a, button, input):focus-visible {
+  outline: 3px solid #7966dc;
+  outline-offset: 3px;
+}
+.error {
+  padding: 12px;
+  background: #fff0f0;
+  color: #a32237;
+  border-radius: 8px;
+  font-size: 14px;
+  line-height: 1.5;
+}
+.help {
+  margin: 24px 0 0;
+  color: #606776;
+  font-size: 14px;
+  line-height: 1.5;
+}
+@media (max-width: 480px) {
+  main {
+    padding: 32px 16px;
+  }
+  .login-card {
+    padding: 28px 22px;
+  }
+  header {
+    flex-wrap: wrap;
+  }
+}
